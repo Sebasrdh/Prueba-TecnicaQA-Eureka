@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="2" failures="0" name="CP-01 - Validar Inicio de sesion" skipped="0" tests="2" time="1.66" timestamp="2024-11-15 04:36:12"><testcase name="1- Validar con credenciales correctas"><error message="Unresolved compilation problem: &#10;&#9;Syntax error on tokens, they can be merged to form ==&#10;" type="java.lang.Error">Unresolved compilation problem: 
+	Syntax error on tokens, they can be merged to form ==
+</error><system-err>Unresolved compilation problem: 
+	Syntax error on tokens, they can be merged to form ==
+&#13;
+com.tresit.cl.pages.login.LoginPages.&lt;init&gt;(LoginPages.java:9)&#13;
+com.tresit.cl.steps.login.LoginStep.&lt;init&gt;(LoginStep.java:7)&#13;
+org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:93)&#13;
+org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)&#13;
+org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:530)&#13;
+org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:758)&#13;
+org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:453)&#13;
+org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:211)&#13;
+</system-err></testcase><testcase name="2 - Validar con credenciales incorrectas"><error message="Unresolved compilation problem: &#10;&#9;Syntax error on tokens, they can be merged to form ==&#10;" type="java.lang.Error">Unresolved compilation problem: 
+	Syntax error on tokens, they can be merged to form ==
+</error><system-err>Unresolved compilation problem: 
+	Syntax error on tokens, they can be merged to form ==
+&#13;
+com.tresit.cl.pages.login.LoginPages.&lt;init&gt;(LoginPages.java:9)&#13;
+com.tresit.cl.steps.login.LoginStep.&lt;init&gt;(LoginStep.java:7)&#13;
+org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:93)&#13;
+org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)&#13;
+org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:530)&#13;
+org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:758)&#13;
+org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:453)&#13;
+org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:211)&#13;
+</system-err></testcase></testsuite>
