@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "ccf85e5a-34cd-46cf-ade0-d2a4c5c046c7",
+		"name": "API CMF",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39038210"
+	},
+	"item": [
+		{
+			"name": "Euro día actual",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"La respuesta contiene un encabezado Content-Type\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"La respuesta contiene un texto que dice Euros\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Euros\");\r",
+							"});\r",
+							"\r",
+							"var jsonData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Los campos 'Valor' y 'Fecha' no son nulos\", function () {\r",
+							"    pm.expect(jsonData).to.have.property('Euros').that.is.an('array').that.is.not.empty;\r",
+							"    jsonData.Euros.forEach(function(euro) {\r",
+							"        pm.expect(euro.Valor).not.to.be.null;\r",
+							"        pm.expect(euro.Fecha).not.to.be.null;\r",
+							"    });\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/euro?apikey={{APIKEY}}&formato=json",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"euro"
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "{{APIKEY}}"
+						},
+						{
+							"key": "formato",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
