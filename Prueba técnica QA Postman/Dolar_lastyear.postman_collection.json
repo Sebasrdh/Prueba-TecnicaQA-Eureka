@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "ccf85e5a-34cd-46cf-ade0-d2a4c5c046c7",
+		"name": "API CMF",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39038210"
+	},
+	"item": [
+		{
+			"name": "Dólar año anterior",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if (pm.response.responseTime < 500) {\r",
+							"    pm.test(`El tiempo de respuesta fue ${pm.response.responseTime}ms y es menor a 500ms`, function () {\r",
+							"        pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"    });\r",
+							"} else {\r",
+							"    pm.test(`El tiempo de respuesta fue ${pm.response.responseTime}ms y es superior a 500ms`, function () {\r",
+							"        pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"    });\r",
+							"}\r",
+							"\r",
+							"pm.test(\"La respuesta contiene el texto Dolares\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Dolares\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"La respuesta contiene datos para el 31 de agosto de 2023\", function () {\r",
+							"\r",
+							"    pm.expect(pm.response.text()).to.include(\"2023-08-31\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/dolar/2023?apikey={{APIKEY}}&formato=json",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"dolar",
+						"2023"
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "{{APIKEY}}"
+						},
+						{
+							"key": "formato",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
