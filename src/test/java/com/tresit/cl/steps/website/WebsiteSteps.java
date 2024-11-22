@@ -1,10 +1,10 @@
-package com.tresit.cl.steps.login;
+package com.tresit.cl.steps.website;
 
-import com.tresit.cl.pages.login.LoginPages;
+import com.tresit.cl.pages.website.MainPage;
 import net.serenitybdd.annotations.Step;
 //import net.thucydides.core.annotations.Step;
 
-public class LoginStep extends LoginPages {
+public class WebsiteSteps extends MainPage {
 
     @Step("Ingresar Usuario")
     public void typeUsername( String username ){

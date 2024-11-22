@@ -5,7 +5,7 @@ import net.serenitybdd.annotations.Step;
 import net.serenitybdd.core.pages.WebElementFacade;
 //import net.thucydides.core.annotations.Step;
 
-public class LoginValidationsStep extends ValidationPage {
+public class WebsiteValidationsStep extends ValidationPage {
 
     @Step("Validar visualizacion del module de productos")
     public Boolean titleIsVisible(){

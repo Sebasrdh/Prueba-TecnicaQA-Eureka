@@ -9,7 +9,7 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "com.tresit.cl.definitions",
-        tags = "@pruebalogin1"
+        tags = "@pruebaEureka"
 )
 public class Runner {
 

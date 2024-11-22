@@ -8,7 +8,7 @@ import java.util.List;
 
 public class ValidationPage extends PageObject {
 
-    @FindBy( xpath = "//span[@class='title']")
+    @FindBy( xpath = "//*[@id=\"loop-container\"]/div/article/div[1]/h1")
     protected WebElementFacade lbl_product;
 
     @FindBy( xpath = "//h3[@data-test='error' and text()='Epic sadface: Username and password do not match any user in this service']")
