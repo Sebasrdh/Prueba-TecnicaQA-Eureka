@@ -37,21 +37,10 @@ public class WebsiteValidation {
         websiteSteps.displayPTagCount();
     }
 
-    @Then("el título del sitio debe ser \"Inicio - Banco Central de Chile\"")
+    @Then("el título del sitio debe ser {string}")
     public void el_titulo_del_sitio_debe_ser(String expectedTitle) {
         websiteSteps.verifySiteTitle(expectedTitle);
     }
-
-    @Then("si el título es correcto, mostrar {string} de lo contrario, mostrar {string}")
-    public void si_el_título_es_correcto_mostrar_de_lo_contrario_mostrar(String successMessage, String errorMessage) {
-        String actualTitle = getDriver().getTitle();
-        if (actualTitle.equals("Inicio - Banco Central de Chile")) {
-            System.out.println(successMessage);
-        } else {
-            System.out.println(errorMessage);
-        }
-    }
-
 
     @Then("la aplicacion debe mostrar los valores encontrados en la UF, UTM, Dólar observado y Euro")
     public void la_aplicacion_debe_mostrar_los_valores_encontrados_en_la_UF_UTM_Dolar_observado_y_Euro() {

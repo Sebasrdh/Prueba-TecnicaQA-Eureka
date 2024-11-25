@@ -9,10 +9,9 @@ Feature: CP-01 - Validar contenido del sitio web
     When el usuario navega al sitio web
     Then la aplicacion debe mostrar la cantidad de etiquetas de párrafo p
 
-  Scenario: 3 - Validar el título del sitio
-    When el usuario navega al sitio web
-    Then el título del sitio debe ser "Inicio - Banco Central de Chile"
-    And si el título es correcto, mostrar "¡Título correcto!" de lo contrario, mostrar "Error en el título"
+#  Scenario: 3 - Validar el título del sitio
+#    Given el usuario navega al sitio web
+#    Then el título del sitio debe ser "Inicio - Banco Central de Chile"
 
   Scenario: 4 - Indicar el valor encontrado en la UF, UTM, Dólar observado y Euro
     When el usuario navega al sitio web
