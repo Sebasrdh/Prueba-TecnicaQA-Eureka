@@ -6,15 +6,12 @@ import net.serenitybdd.core.pages.PageObject;
 
 public class WebSite {
 
-    @Steps( shared = true )
+    @Steps(shared = true)
     PageObject swag;
 
-    @Step( "Navegar al sitio web")
-    public void navigateTo( String url ){
-        swag.setDefaultBaseUrl( url );
+    @Step("Navegar al sitio web")
+    public void navigateTo(String url) {
+        swag.setDefaultBaseUrl(url);
         swag.open();
     }
-
-
-
 }
